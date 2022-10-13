@@ -515,7 +515,7 @@ icon-envelope icon-telephonelogo
   width: 170px;
   height: 92px;
   align-items: center;
-  background-color: #fff;
+  background: transparent;
   justify-content: center;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
@@ -525,25 +525,19 @@ icon-envelope icon-telephonelogo
 }
 
 .thumb-client:hover .thumb-client-icon {
-
   fill: #2196F3;
 }
-
-.thumb-client-icon {
-  fill: #AFB1B8;
-  width: 106px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
 .thumb-client:hover {
   border: 1px solid #2196F3;
   fill: #2196F3;
 }
-
-.thumb-client-icon:hover {
-  fill: #2196F3;
+.thumb-client-icon {
+  fill: #AFB1B8;
+  background:transparent;
+  width: 106px;
+  height: 60px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------------------Секція Фільтр робіт, Стилізаця Кнопки----------------------- */
@@ -800,6 +794,7 @@ icon-envelope icon-telephonelogo
   background-color: #2196F3;
   cursor: pointer;
 }
+
 /** --------------------------- Модальне вікно --------------------------- */
 .backdrop {
   width: 100%;
@@ -825,14 +820,13 @@ icon-envelope icon-telephonelogo
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation-fill-mode: none;
 }
 
 .close-logo {
   width: 30px;
   height: 30px;
   background: none;
-
+  border-color: #757575;
 }
 
 .modal-close-button {
@@ -844,22 +838,21 @@ icon-envelope icon-telephonelogo
   border-radius: 50%;
   right: 16px;
   top: 8px;
+}
 
-  
-  }
-  .is-hidden {
-    opacity: 0;
-    pointer-events: 0;
-    visibility: hidden;
-    transform: scaleY(0.9);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.is-hidden {
+  opacity: 0;
+  pointer-events: 0;
+  visibility: hidden;
+  transform: scaleY(1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .click {
+/* .click {
   
    
   transform: scaleY(1);
   transition-duration: 2500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */

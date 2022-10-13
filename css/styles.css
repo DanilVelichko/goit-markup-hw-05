@@ -135,11 +135,13 @@ img {
 
 .site-nav .link {
   color: var(--link-color);
-
+  position: static;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover {
-  color: var(--hover-color)
+  color: var(--hover-color);
 }
 
 .site-nav .link:focus {
@@ -150,10 +152,35 @@ img {
   color: var(--accent-color);
 }
 
+.contact-thumb {
+  position: relative;
+}
+
+.line-studio-page {
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  left: -2px;
+  top: 44px;
+  background: #2196F3;
+  border-radius: 2px;
+}
+
+.line-portfolio-page {
+  position: absolute;
+  width: 78px;
+  height: 4px;
+  top: 44px;
+  left: -3px;
+  background: #2196F3;
+  border-radius: 2px;
+}
+
 .site-nav .item {
   padding-top: 32px;
   padding-bottom: 32px;
   margin-right: 32px;
+  letter-spacing: 0.02em;
 }
 
 .site-nav .item:last-child {
@@ -178,16 +205,20 @@ img {
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
   align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-cont .link:hover {
   color: var(--hover-color);
   fill: var(--hover-color);
+
 }
 
 .site-cont .link:focus {
   color: var(--focus-color);
   fill: var(--hover-color);
+
 }
 
 .link-svg {
@@ -330,10 +361,37 @@ button {
 }
 
 /* -----------------------Секція Чим ми займаємось----------------------- */
-
 .flex-work-examples {
   display: flex;
   gap: 30px;
+}
+
+.thumb-work {
+  position: relative;
+}
+
+.text-examples-work {
+  position: absolute;
+  display: inline-block;
+  width: 370px;
+  height: 70px;
+  padding: 27px 107px;
+  bottom: 0;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.text-examples-work.mob {
+  padding: 27px 113px;
+}
+
+.text-examples-work.diz {
+  padding: 27px 95px;
 }
 
 /* -----------------------Секція Команда----------------------- */
@@ -412,12 +470,15 @@ button {
   align-items: center;
   text-align: center;
   border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-icon:hover {
   fill: #FFFFFF;
   background-color: #2196F3;
   cursor: pointer;
+
 }
 
 .button-logo {
@@ -434,7 +495,6 @@ icon-envelope icon-telephonelogo
   padding: 0;
   margin: 0;
   list-style: 0;
-
 }
 
 .clients-list {
@@ -443,9 +503,6 @@ icon-envelope icon-telephonelogo
   border: none;
   gap: 30px;
   justify-content: center;
-  /* background-size: 20px 20px; */
-  /* outline: 1px #212121 solid; */
-
 }
 
 .flex-clients-item:last-child {
@@ -463,7 +520,8 @@ icon-envelope icon-telephonelogo
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   cursor: pointer;
-
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .thumb-client:hover .thumb-client-icon {
@@ -474,7 +532,8 @@ icon-envelope icon-telephonelogo
 .thumb-client-icon {
   fill: #AFB1B8;
   width: 106px;
-
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -499,6 +558,8 @@ icon-envelope icon-telephonelogo
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-filter:hover {
@@ -507,6 +568,7 @@ icon-envelope icon-telephonelogo
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+
 }
 
 .button-filter:focus {
@@ -516,8 +578,6 @@ icon-envelope icon-telephonelogo
     0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
-.flex-btn-container {}
 
 .filter-list {
   display: flex;
@@ -554,6 +614,7 @@ icon-envelope icon-telephonelogo
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+  /* position: relative; */
 }
 
 .projects-link:hover {
@@ -561,6 +622,8 @@ icon-envelope icon-telephonelogo
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-element:nth-child(3n) {
@@ -601,16 +664,40 @@ icon-envelope icon-telephonelogo
   color: var(--primary-text-color)
 }
 
-/* -----------------------Футер----------------------- */
-.footer-container {
-  display: flex;
-  /* align-items: center; */
-  /* justify-content: space-between; */
+.product-thumb {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+
+.about-item-text {
+  opacity: 0;
+  position: absolute;
+  outline: 3px solid rgb(133, 52, 122);
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: #FFFFFF;
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.logo-footer {
-  /* margin-right: 156px; */
+.flex-element:hover .about-item-text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* -----------------------Футер----------------------- */
+.footer-container {
+  display: flex;
 }
 
 .logo-white {
@@ -632,6 +719,8 @@ icon-envelope icon-telephonelogo
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-nav .address {
@@ -653,6 +742,7 @@ icon-envelope icon-telephonelogo
 
 .footer-nav .link:focus {
   color: var(--focus-color);
+
 }
 
 .footer-nav .last {
@@ -669,8 +759,6 @@ icon-envelope icon-telephonelogo
   text-transform: uppercase;
   color: #FFFFFF;
 }
-
-.social-list-footer {}
 
 .social-item-footer {
   display: inline-block;
@@ -700,14 +788,39 @@ icon-envelope icon-telephonelogo
   height: 44px;
   fill: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.1);
-
   align-items: center;
   text-align: center;
   border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item-footer:hover {
   fill: #FFFFFF;
   background-color: #2196F3;
   cursor: pointer;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #41383885;
+}
+
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+
 }

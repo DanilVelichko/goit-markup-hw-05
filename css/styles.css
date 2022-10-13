@@ -800,13 +800,17 @@ icon-envelope icon-telephonelogo
   background-color: #2196F3;
   cursor: pointer;
 }
-
+/** --------------------------- Модальне вікно --------------------------- */
 .backdrop {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   background-color: #41383885;
+  animation-fill-mode: none;
+  opacity: 1;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -818,9 +822,44 @@ icon-envelope icon-telephonelogo
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-fill-mode: none;
+}
 
+.close-logo {
+  width: 30px;
+  height: 30px;
+  background: none;
 
+}
+
+.modal-close-button {
+  position: absolute;
+  /* outline: 1px red solid; */
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  right: 16px;
+  top: 8px;
+
+  
+  }
+  .is-hidden {
+    opacity: 0;
+    pointer-events: 0;
+    visibility: hidden;
+    transform: scaleY(0.9);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .click {
+  
+   
+  transform: scaleY(1);
+  transition-duration: 2500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
